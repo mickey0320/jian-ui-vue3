@@ -25,8 +25,14 @@
 
 @mixin e($element) {
   @at-root {
-    #{& + $modifier-separator + $element} {
+    #{& + $element-separator + $element} {
       @content;
     }
   }
+}
+
+@mixin button-type($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
 }
